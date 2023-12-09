@@ -1,4 +1,4 @@
-# Power Apps Component Framework (PCF) Chekbox Control
+# Power Apps Component Framework (PCF) Checkbox Control
 
 ## Description
 
