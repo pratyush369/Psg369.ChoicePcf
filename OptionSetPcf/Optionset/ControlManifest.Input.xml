@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="psg369.ChoicePcf" constructor="Optionset" version="1.0.4" display-name-key="Fluent UI v9 Optionset" description-key="Optionset Checkbox FluentUIv9 Control" control-type="standard" >
+    <!--external-service-usage node declares whether this 3rd party PCF control is using external service or not, if yes, this control will be considered as premium and please also add the external domain it is using.
+    If it is not using any external service, please set the enabled="false" and DO NOT add any domain below. The "enabled" will be false by default.
+    Example1:
+      <external-service-usage enabled="true">
+        <domain>www.Microsoft.com</domain>
+      </external-service-usage>
+    Example2:
+      <external-service-usage enabled="false">
+      </external-service-usage>
+    -->
+    <external-service-usage enabled="false">
+      <!--UNCOMMENT TO ADD EXTERNAL DOMAINS
+      <domain></domain>
+      <domain></domain>
+      -->
+    </external-service-usage>
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="OptionsetColumn" display-name-key="Optionset Column" description-key="Select an Optionset column" of-type="OptionSet" usage="bound" required="true" />
+    <property name="FluentUIv9Theme" display-name-key="Fluent UI v9 Theme" description-key="Select a theme" of-type="Enum" usage="input" required="true">
+        <value 
+      name="Web Light"
+      display-name-key="Web Light Theme">webLightTheme</value>
+    <value 
+      name="Web Dark"
+      display-name-key="Web Dark Theme">webDarkTheme</value>
+    <value 
+      name="Teams Light"
+      display-name-key="Teams Light Theme">teamsLightTheme</value>
+    <value
+      name="Teams Dark"
+      display-name-key="Teams Dark Theme">teamsDarkTheme</value>
+    <value 
+      name="Teams High Contrast"
+      display-name-key="Teams High Contrast">teamsHighContrastTheme</value>
+    </property>
+    <property name="CheckBoxShape" display-name-key="Shape of check box, circular or square" description-key="Select a shape for checkbox" of-type="Enum" usage="input" required="true">
+        <value 
+      name="Circular"
+      display-name-key="Circular Shape Checkboxes">circular</value>
+    <value 
+      name="Square"
+      display-name-key="Square Shape Checkboxes">square</value>
+    </property>
+        <property name="CheckBoxSize" display-name-key="Size of check box, medium or large" description-key="Select a size for checkboxes" of-type="Enum" usage="input" required="true">
+        <value 
+      name="medium"
+      display-name-key="Medium Size Checkboxes">medium</value>
+    <value 
+      name="large"
+      display-name-key="Large Size Checkboxes">large</value>
+    </property>
+    <!--
+      Property node's of-type attribute can be of-type-group attribute.
+      Example:
+      <type-group name="numbers">
+        <type>Whole.None</type>
+        <type>Currency</type>
+        <type>FP</type>
+        <type>Decimal</type>
+      </type-group>
+      <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+    -->
+    <resources>
+      <code path="index.ts" order="1"/>
+      <!-- UNCOMMENT TO ADD MORE RESOURCES
+      <css path="css/Optionset.css" order="1" />
+      <resx path="strings/Optionset.1033.resx" version="1.0.0" />
+      -->
+    </resources>
+    <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+    -->
+  </control>
+</manifest>
